@@ -103,8 +103,8 @@ if __name__ == '__main__':
     parser.add_argument('--use_tensorboard', type=str2bool, default=False)
 
     # Directories.
-    parser.add_argument('--celeba_image_dir', type=str, default='data/celeba/images')
-    parser.add_argument('--attr_path', type=str, default='data/celeba/list_attr_celeba.txt')
+    parser.add_argument('--celeba_image_dir', type=str, default='/kaggle/working/data/celeba/images')
+    parser.add_argument('--attr_path', type=str, default='/kaggle/working/data/celeba/list_attr_celeba.txt')
     parser.add_argument('--rafd_image_dir', type=str, default='data/RaFD/train')
     parser.add_argument('--log_dir', type=str, default='stargan/logs')
     parser.add_argument('--model_save_dir', type=str, default='stargan/models')
@@ -114,7 +114,7 @@ if __name__ == '__main__':
     # Step size.
     parser.add_argument('--log_step', type=int, default=10)
     parser.add_argument('--sample_step', type=int, default=1000)
-    parser.add_argument('--model_save_step', type=int, default=5000)
+    parser.add_argument('--model_save_step', type=int, default=500)
     parser.add_argument('--lr_update_step', type=int, default=1000)
 
     config = parser.parse_args()
